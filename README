@@ -1,0 +1,18 @@
+
+Новый проект инициализируем. 
+
+git clone https://github.com/***/software-****.git # подключить репо
+
+git remote -v # показать ссылку на удаленный репо
+
+git checkout -b "Branch-Test" # создать ветку и перейти
+
+git add . # изменить что-то и локально сохранить
+
+git commit -m "Первый коммит для теста"
+
+git push origin # выдаст ошибку - решаем дальше
+
+git push --set-upstream origin Branch-Test # создаем и синхроним удаленную ветку
+
+# делаем merge request в удаленном репо
