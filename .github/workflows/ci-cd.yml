@@ -2,9 +2,9 @@ name: CI/CD for C# Project
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Branch-Test ]
   pull_request:
-    branches: [ main ]
+    branches: [ Branch-Test ]
 
 jobs:
   build:
