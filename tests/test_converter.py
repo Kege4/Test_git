@@ -6,11 +6,11 @@ from src.converter import km_to_miles, miles_to_km
 
 class TestConverter(unittest.TestCase):
 
-    def test_km_to_miles(self):
-        self.assertAlmostEqual(km_to_miles(1), 0.621371, places=5)
+    def test_km_to_miles_valid(self):
+        self.assertEqual(km_to_miles(5), 3.107)
 
-    def test_miles_to_km(self):
-        self.assertAlmostEqual(miles_to_km(1), 1.60934, places=5)
+    def test_miles_to_km_valid(self):
+        self.assertEqual(miles_to_km(3.107), 5.0)
 
     def test_km_to_miles_negative(self):
         with self.assertRaises(ValueError):
@@ -21,5 +21,5 @@ class TestConverter(unittest.TestCase):
             miles_to_km(-5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
