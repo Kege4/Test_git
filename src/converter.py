@@ -10,4 +10,3 @@ def miles_to_km(miles):
     if miles < 0:
         raise ValueError("Distance cannot be negative")
     return miles * 1.60934
-
