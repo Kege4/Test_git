@@ -3,6 +3,7 @@
 import unittest
 from src.converter import km_to_miles, miles_to_km
 
+
 class TestConverter(unittest.TestCase):
 
     def test_km_to_miles(self):
@@ -18,6 +19,7 @@ class TestConverter(unittest.TestCase):
     def test_miles_to_km_negative(self):
         with self.assertRaises(ValueError):
             miles_to_km(-5)
+
 
 if __name__ == '__main__':
     unittest.main()
