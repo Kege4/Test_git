@@ -1,9 +1,16 @@
 import unittest
-from src.main import add
+from src.main import create_task
 
-class TestAdd(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(add(2, 3), 5)
+class TestTaskCreation(unittest.TestCase):
+
+    def test_create_task_valid_data(self):
+        task = create_task("Buy milk", "2 liters of milk")
+        self.assertEqual(task["title"], "Buy milk")
+        self.assertEqual(task["description"], "2 liters of milk")
+
+    def test_create_task_missing_title(self):
+        with self.assertRaises(ValueError):
+            create_task("", "No title")
 
 if __name__ == '__main__':
     unittest.main()
